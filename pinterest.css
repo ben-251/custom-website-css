@@ -1,0 +1,482 @@
+/* ==UserStyle==
+@name           ? - Jun 2024
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document domain("uk.pinterest.com"), domain("pinterest.co.uk") {
+    /*pinterest*/
+    /* haa means not hovered. TMJ and bPW mean hovered. iyn sometimes glitches when scrolling and stuff, so if you get that glitch, remove iyn from the class list */
+    *:root {
+        --my-blue: #240615;
+        /*#101819: activate this colour if you want to apply jade serenade*/
+        /*#18161d*/
+        /*goodbye red! */        
+        --color-jade-serenade-0: #c3ffe5;
+        --color-jade-serenade-50: #B6FFE0;
+        --color-jade-serenade-100: #a9ffda;
+        --color-jade-serenade-200: #8bf8c8;
+        --color-jade-serenade-300: #67deaa;
+        --color-jade-serenade-400: #47c48e;
+        --color-jade-serenade-450: #30AB75;
+        --color-jade-serenade-500: #18926b;
+        --color-jade-serenade-600:#087847;
+        --color-jade-serenade-700: #005e35;
+        --color-jade-serenade-800: #004527;
+        --color-jade-serenade-900: #002b19;
+        
+        /*
+        --color-red-pushpin-0: var(--color-jade-serenade-0);
+        --color-red-pushpin-50: var(--color-jade-serenade-50);
+        --color-red-pushpin-100: var(--color-jade-serenade-100);
+        --color-red-pushpin-200: var(--color-jade-serenade-200);
+        --color-red-pushpin-300: var(--color-jade-serenade-300);
+        --color-red-pushpin-400: var(--color-jade-serenade-400);
+        --color-red-pushpin-450: var(--color-jade-serenade-450);
+        --color-red-pushpin-500: var(--color-jade-serenade-500);
+        --color-red-pushpin-600: var(--color-jade-serenade-600);
+        --color-red-pushpin-700: var(--color-jade-serenade-700);
+        --color-red-pushpin-800: var(--color-jade-serenade-800);
+        --color-red-pushpin-900: var(--color-jade-serenade-900);
+        */
+   
+        /* background */
+            --color-background-subtle: color-mix(in srgb, #b2b2b2, var(--my-blue) 90%);
+            --color-background-hover: color-mix(in srgb, #b2b2b2, var(--my-blue) 80%);
+            --color-background-brand: var(--color-red-pushpin-500);
+             --color-background-primary-base: var(--color-red-pushpin-400);
+            --color-background-primary-weak: var(--color-red-pushpin-300);
+            --color-background-primary-strong: var(--color-red-pushpin-500);
+            /* box */
+                --color-background-box-primary: var(--color-red-pushpin-400);
+                --color-background-box-selected: var(--color-red-pushpin-600);
+                --color-background-box-secondary: color-mix(in srgb, #e9e9e9, var(--my-blue) 70%);
+                --color-background-box-default: var(--my-blue);
+            /* button */
+                --color-background-button-primary-default: var(--color-red-pushpin-500);
+                --color-background-button-primary-hover: var(--color-red-pushpin-600);
+                --color-background-button-primary-active: var(--color-red-pushpin-700);
+                --color-background-button-secondary-default: color-mix(in srgb,  var(--color-red-pushpin-500), var(--my-blue) 70%);
+                --color-background-button-secondary-hover: color-mix(in srgb,  var(--color-red-pushpin-400), var(--my-blue) 70%);
+                --color-background-button-secondary-active: color-mix(in srgb,  var(--color-red-pushpin-300), var(--my-blue) 70%);
+        
+                --color-background-button-tertiary-default: color-mix(in srgb, var(--my-blue) 90%, white);
+                --color-background-button-tertiary-hover: color-mix(in srgb, var(--color-background-button-tertiary-default) 80%, white);
+                --color-background-button-tertiary-active: color-mix(in srgb, var(--color-background-button-tertiary-default) 80%, white);
+                --color-background-button-selected-default: color-mix(in srgb, #777, var(--my-blue));
+                
+             /* tabs */
+                --color-background-tabs-default-base: var(--color-background-subtle);
+                --color-background-tabs-default-hover: var(--color-background-hover);
+                --color-background-tabs-default-active: var(--color-background-hover);
+            /* form */
+                --color-background-formfield-primary: var(--color-background-subtle);
+            /*toggle */
+                --color-background-switch-default-selected: var(--color-background-button-primary-default);
+                --color-background-switch-default-unselected: color-mix(in srgb, var(--color-background-button-tertiary-default), var(--color-red-pushpin-800) 30%);
+                --color-background-toggle-head-unselected:  color-mix(in srgb, #e9e9e9, var(--my-blue) 70%);
+                --color-background-toggle-head-selected:  color-mix(in srgb, #e9e9e9, var(--my-blue) 70%);
+        
+
+        --color-background-popover-primary:  color-mix(in srgb, var(--my-blue) 90%, white);      
+        
+        /* foreground */
+            --color-text-inverse: white;
+            --color-text-dark: var(--my-blue);
+            --color-text-default: #fff;
+            --color-text-subtle:  color-mix(in srgb, var(--my-blue) 10%, white);
+            --color-icon-default: white;
+            --color-icon-dark: color-mix(in srgb, var(--my-blue) 80%, white);
+            --color-icon-subtle: color-mix(in srgb, var(--my-blue) 10%, white);
+            --color-icon-hover: color-mix(in srgb, var(--my-blue) 10%, white);
+            --color-border-container: color-mix(in srgb, var(--my-blue) 60%, white);
+            --color-border-default: #c0c0c0;
+            --color-border-focus: color-mix(in srgb, var(--my-blue) 60%, var(--color-red-pushpin-400));
+            --color-border-popover-primary: color-mix(in srgb, var(--my-blue) 60%, var(--color-red-pushpin-400));
+            --color-border-avatar: transparent;
+            --color-text-formfield-default: white;
+
+            --color-icon-brand-primary: var(--color-red-pushpin-500);
+            --color-icon-avatar-default: white;
+
+            --color-background-selected-base: var(--my-blue);
+            --color-background-unselected-base: color-mix(in srgb, var(--my-blue) 80%, var(--color-red-pushpin-400));
+    }
+
+    body {
+        background-color: var(--my-blue);
+        color: white;
+    }
+
+
+    /* the pin names and authors (respectively) */
+    .Wk9.xQ4.CCY.S9z.DUt.kVc.agv.LIa,
+    .tBJ.dyH.iFc.j1A.X8m.zDA.IZT.swG.CKL {
+        color: var(--color-text-subtle)
+    }
+    /* back button */
+    svg.Hn_.Uvi.gUZ.U9O.kVc, [data-test-id="shop-button"] svg.Uvi.gUZ.U9O.kVc {
+        color: var(--color-icon-dark)
+    }
+    [data-test-id="board-tool-header"] .HEm.adn.yQo.lnZ.wsz svg {
+        color: var(--color-icon-default)
+    }
+    /* pin link external */
+        .JME.Jea.KS5.Umk.sLG.zI7.iyn.Hsu .tBJ.dyH.iFc.j1A.X8m.zDA.IZT.H2s.CKL {
+            color: var(--color-text-dark)
+        }
+        /* arrow */
+        .Jea.b8T.dLb.zI7.iyn.Hsu > * > svg{
+            color: var(--color-text-dark)
+        }
+    /* pin description */
+    .lH1.dyH.iFc.H2s.GTB.X8m.zDA.IZT {
+        background-color: var(--my-blue)
+    }
+    /* pin link sentences */
+    .zI7.iyn.Hsu[data-test-id="pinrep-footer"] .X6t.zI7.iyn.Hsu a div {
+        font-size: 5px;
+        display: none
+    }
+    .zI7.iyn.Hsu[data-test-id="pinrep-footer"] .tBJ.dyH.iFc.j1A.X8m.zDA.IZT.H2s.CKL a {
+        font-size: 12px;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .zI7.iyn.Hsu[data-test-id="pinrep-footer"] {
+        padding: 8px 6px 0 6px !important;
+    }
+    /* remove all tertiary backgrounds from header */
+    #HeaderContent {
+        --color-background-button-tertiary-default: transparent;
+        --color-background-button-tertiary-hover: transparent;
+        --color-background-button-tertiary-active: transparent 
+       
+    }
+    
+    /* Cancel button in search box */
+        #searchBoxContainer .x8f.INd._O1.KS5.mQ8.OGJ {
+            --color-background-button-tertiary-default: color-mix(in srgb, var(--my-blue) 20%, white);
+            --color-background-button-tertiary-hover: color-mix(in srgb, var(--color-background-button-tertiary-default) 10%, white);
+        }
+        #searchBoxContainer .x8f.INd._O1.KS5.mQ8.OGJ.bPW > svg {
+            color: var(--color-icon-hover)
+        }
+    /* searchbox */
+        #searchBoxContainer .Jea.fev.zI7.iyn.Hsu {
+            background-color: var(--color-background-subtle) !important;
+            color: white;
+        }
+        #searchBoxContainer .ujU.zI7.iyn.Hsu input {
+            color: white !important;
+        }
+        #searchBoxContainer .zI7.iyn.Hsu .x8f.INd._O1.KS5.mQ8.OGJ {
+            background-color: transparent
+        }
+    /* divider */
+    #searchBoxContainer .MMh._Y5.feh.s7I.zI7.iyn.Hsu:not([data-test-id="action-bar"] *){
+        background-color: var(--color-icon-subtle) !important
+    }
+    /* search magnifying glass */
+    /*
+    #searchBoxContainer .Uvi.gUZ.U9O.kVc {
+        color: white
+    }
+    
+    #searchBoxContainer .zI7.iyn.Hsu span,  #searchBoxContainer .JME.zI7.iyn.Hsu svg {
+        color: white
+    }  */
+    [data-test-id="clear-recent-queries"] svg {
+        color: var(--color-icon-default)
+    }
+    
+    /* search your pins */
+    
+    /* home cards */
+    .Jea.XiG.hA-.ho-.zI7.iyn.Hsu {
+        background-color: rgba(0, 0, 0, 0.3)
+    }
+    .MIw.QLY.Rym.ho-.ojN.p6V.zI7.iyn.Hsu {
+        background-color: rgba(0, 0, 0, 0.2) !important
+    }
+    /* recent searches */
+    
+    .tBJ.dyH.iFc.sAJ.X8m.tg7.IZT.swG{
+        color: var(--color-text-default);
+        font-weight: bold
+    }
+    /*search result pastel suggestions */
+    .KS5.hs0.un8.tkf.TB_ .xuA .tBJ.dyH.iFc.sAJ.X8m.tg7.IZT.swG {
+        color: var(--color-text-dark);
+        font-weight: normal
+    }
+    /*filter */
+    .qiB .Uvi.gUZ.U9O.kVc {
+        color: var(--color-icon-dark)
+    }
+    /* x for recent search */
+    /*
+    .JME.zI7.iyn.Hsu svg {
+        color: #222
+    }
+    /* profile initial/icon */
+        .zI7.iyn.Hsu {
+            color: black;
+        }
+        .sLG.zI7.iyn.Hsu > * > .tBJ.dyH.iFc.j1A.X8m.zDA.IZ.H2s {
+            color: white;
+            fill: currentColor
+        }
+        .INd.XiG.haa.zI7.iyn.Hsu {
+            background-color: var(--color-red-pushpin-500)
+        }
+        .INd.XiG.haa.zI7.iyn.Hsu text {
+           font-size: 45px;
+        }
+        .Wk9.xQ4.CCY.S9z.INd.kVc.Tbt.L4E.e8F.BG7 .INd.Jea.KS5.mQ8.zI7.Hsu > .INd.XiG.zI7.Hsu {
+            width: 32px !important;
+            height: 32px !important;
+        }
+    /* search suggestion hover */
+    .haa.zI7.iyn.Hsu {
+        background-color: var(--color-red-pushpin-500)
+    }
+    .haa.zI7.iyn.Hsu .JlN {
+        color: var(--color-text-default)
+    }
+    .TMJ.zI7.iyn.Hsu, .TzN.zI7.iyn.Hsu {
+        background-color: var(--color-red-pushpin-400)
+    }
+
+    /* side buttons on nav bar */
+    .INd.Jea.KS5.haa.mQ8.zI7.iyn.Hsu, .INd.zI7.iyn.haa.Hsu{
+        background-color: var(--color-background-box-transparent);
+    }
+    .INd.Jea.KS5.haa.mQ8.zI7.iyn.Hsu .BNH {
+        color: var(--color-icon-default)
+    }
+
+    /* left filter button */
+    /*.KS5.hs0.un8.tkf.TB_ {
+        --color-icon-default: black
+    }*/
+    /* Popout */
+    .DUt.Jea.hA-.haa.jzS.wYR.zI7.iyn.Hsu {
+        background-color: transparent
+    }
+    #PinBetterSaveDropDown .B1n {
+        color: var(--color-text-default)
+    }
+    /* home button */
+        .Eqh.fev.zI7.uom.Hsu:nth-child(1) {
+            background-color: var(--color-red-pushpin-500)
+        }
+        .Eqh.fev.zI7.uom.Hsu:nth-child(1):hover {
+            background-color: var(--color-red-pushpin-400);
+        }
+    
+    /* board menu pinterest*/
+    [data-test-id*="boardCard"] .haa.zI7.iyn.Hsu {
+       background-color: var(--color-background-subtle);
+    }
+    .FNs.zI7.iyn.Hsu {
+        color: var(--color-text-default)
+    }
+    
+    .FNs.zI7.iyn.Hsu .oy8.zI7.iyn.Hsu > * > .zI7.iyn.Hsu > svg {
+        color: var(--color-icon-subtle)
+    }
+
+    .hs0.un8.tkf.TB_ > .xuA button > div.RCK.Hsu.USg.adn.CCY.NTm.KhY.S9z.F10.xD4.fZz.hUC.a_A.hNT.BG7.hDj._O1.KS5.mQ8.Tbt.L4E {
+        background-color: var(--color-background-subtle);
+    } 
+
+    .DUt.XiG._wN.hA-.wYR.zI7.iyn.Hsu {
+        border-radius: var(--rounding-600);
+    }
+    
+    /* grid */
+    [data-test-id="drawer-image-group-first-image-container"] {
+        border: none
+    }
+    [data-test-id*="boardCard"] * {
+        border: 0px !important
+    }
+    [data-test-id*="boardCard"] .MRE > div > div:nth-child(1) img {
+        border-bottom: 15px solid !important
+    }
+    [data-test-id*="boardCard"] .MIw.QLY.Rym.ojN.p6V.sLG.zI7.iyn.Hsu {
+        border: 2px solid var(--my-blue) !important
+    }
+    
+    [data-test-id="gestalt-avatar-svg"] > div,
+    [data-test-id="board-header"] .XiG.zI7.iyn.Hsu .INd.XiG.haa.zI7.iyn.Hsu  {
+        background-color: var(--color-background-button-tertiary-default)
+    }
+    [data-test-id="gestalt-avatar-svg"] > div {
+        background-color: color-mix(in srgb, var(--color-background-button-tertiary-default), white 15%)!important
+        
+    }
+    /* trying to get the "organise board" feature looking fine to */
+    [data-test-id="board-tool-header"] .tBJ.dyH.iFc.sAJ.X8m.tg7.H2s {
+        color: var(--color-text-dark) !important; 
+    }
+    /* Your shopping list */
+    a.Wk9.xQ4.CCY.S9z.eEj.kVc.Tbt.L4E.e8F.BG7 .LJB.Pw5.XiG.daS.ho-.imm.sLG.zI7.Hsu {
+        border-color: var(--my-blue) !important;
+        border-width: 2px !important
+    }
+    /* all pins */
+    .wsz.zI7.Hsu :is(.MIw.QLY.Rym.ojN.p6V.sLG.zI7.Hsu,.MIw.QLY.Rym.haa.zI7.iyn.Hsu) {
+        border: 2px var(--my-blue) !important;
+    }
+    /* edit button */
+    .hs0.un8.C9i.TB_ button.HEm.adn.yQo.lnZ.wsz svg.Uvi {
+        color: var(--color-icon-dark)
+    }
+    .hs0.jx-.un8.C9i.TB_ button.RCK.Hsu.USg.adn.CCY.NTm.KhY.S9z.Vxj.aZc.Zr3.hA-.OWt .JlN {
+        color: var(--color-icon-dark)
+    }
+    
+    :is([data-test-id="closeup-share-button"],[data-test-id="closeup-more-options-button"]) .hs0.un8.C9i.TB_ button.HEm.adn.yQo.lnZ.wsz svg.Uvi {
+        color: var(--color-icon-default)
+    }
+    
+    [data-test-id="boardSelectionDropdown"] svg.Uvi.gUZ.U9O.kVc {
+        color: var(--color-icon-default)
+    }
+    
+    /* heart */
+    [data-test-id="react-button"] .Jea.KS5.mQ8.zI7.iyn.Hsu {
+        color: var(--color-icon-default)
+    }
+    /* toggle */
+    /* rdh is unchecked and taI is checked */
+    input[type="checkbox"] + div.U7Q.Hsu.MIw.INd.RDh.GEq.nG5 {
+        background-color: var(--color-background-toggle-head-unselected);
+    }
+    input[type="checkbox"] + div.U7Q.Hsu.MIw.INd.taI.GEq.nG5 {
+        background-color: var(--color-background-toggle-head-selected);
+    }
+    .nG5:has(input[type="checkbox"] + div.U7Q.Hsu.MIw.INd.RDh.GEq.nG5) {
+        border-color: var(--color-background-unselected-base);
+        border: none
+    }
+    .nG5:has(input[type="checkbox"] + div.U7Q.Hsu.MIw.INd.taI.GEq.nG5) {
+        border-color: var(--color-background-selected-base);
+        border: none
+    }
+    
+    .INd.Zr3.ebZ.hUC.zI7.iyn.Hsu svg.Uvi {
+        color: #333
+    }
+    /* secondary buttons */
+    .a_A:hover {
+        background-color: var(--color-background-button-secondary-hover);
+    }
+    .a_A {
+        background-color: var(--color-background-button-secondary-default);
+        color: var(--color-text-secondary-default);
+    }
+    /* carousel gradient */
+    /* p6v means right and the Rym one means left */
+    .moreIdeasBoardRepCarousel ~ .MIw.QLY.p6V.zI7.iyn.Hsu {
+        background: linear-gradient(270deg, var(--my-blue) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    }
+    .moreIdeasBoardRepCarousel ~ .MIw.QLY.Rym.zI7.iyn.Hsu {
+        background: linear-gradient(90deg, var(--my-blue) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    }
+    [data-test-id="navigation-fab-container"] > div {
+        background-color: var(--color-background-button-tertiary-default)
+    }
+
+    
+    /* form field */
+    span[data-text="true"][contenteditable="true"] {
+        color: white
+    }
+    .zI7.iyn.Hsu[data-test-id="comment-editor-container"] {
+        color: var(--color-text-formfield-default)
+    }
+    .LJB.Pw5.XgI.fev.ujU.wsz.zI7.iyn.Hsu:has([data-test-id="editor-with-mentions"]) {
+        background-color: var( --color-background-formfield-primary);
+        border-color: var(--color-border-container) !important
+    }
+    
+    /* choose board to save to */
+    [data-test-id="board-picker-flyout"] .Il7 {
+        background-color: var(--color-red-pushpin-400);
+        color: var(--color-text-dark)
+    }      
+    [data-test-id="board-picker-flyout"] .Il7 .B1n {
+        color: var(--color-text-dark)
+    }
+    [data-test-id="board-picker-flyout"] .Il7:hover {
+        background-color: var(--color-red-pushpin-300);
+        color: var(--color-text-dark)
+    }
+    [data-test-id="board-picker-flyout"] .Il7:hover .B1n {
+        color: var(--color-text-dark)
+    }
+    [data-test-id="board-picker-flyout"] .haa.zI7.iyn.Hsu {
+        background-color: color-mix(in srgb, var(--my-blue), var(--color-red-pushpin-400))
+    }
+    /* new board */
+    /*h1.lH1.dyH.iFc.H2s.GTB.X8m.tg7.IZT {
+        color: var(--color-text-dark)
+    }*/
+    div.QDA.fBv.mQ8.zI7.iyn.Hsu:has(h1.lH1.dyH.iFc.H2s.GTB.X8m.tg7.IZT) {
+        background-color: transparent
+    }
+    .Jea.XiG.jzS.ujU.zI7.iyn.Hsu:has(div.QDA.fBv.mQ8.zI7.iyn.Hsu h1.lH1.dyH.iFc.H2s.GTB.X8m.tg7.IZT) {
+        background-color: var(--color-background-button-tertiary-default);     
+    }
+    /* submit buttons */
+    [data-test-id="submit-button"] > button {
+        background-color: var(--color-background-button-primary-default)            
+    }
+    [data-test-id="submit-button"]:hover > button {
+        background-color: var(--color-background-button-primary-hover)
+    }
+    [data-test-id="submit-button"]:active > button {
+        background-color: var(--color-background-button-primary-active)
+    }
+    [data-test-id="creator-profile-name"] .zI7.iyn.Hsu[data-test-id="verified-name"] {
+        color: var(--color-text-default)
+    }
+    
+    /* save button from within board */
+    .SaveButton__background--enabled {
+        background-color: var(--color-background-button-primary-active);
+    }
+    .SaveButton__background--enabled:hover {
+        background-color: var(--color-background-button-primary-hover); 
+    }
+    .SaveButton__background--enabled:active {
+        background-color: var(--color-background-button-primary-active); 
+    }
+    
+    :is([data-test-id="edit-button"], [data-test-id="share-icon-button"]) .Uvi {
+        color: var(--color-icon-dark)
+    }
+
+    /* new board */
+    .ZHw.XiG.XbT._O1.ho-.rDA.jar.CCY:has(:is([data-test-id="board-form-container"], input#sectionEditName)) {
+        background-color: var(--color-background-button-tertiary-default)
+    }
+    /* submit */
+    button.RCK.Hsu.USg.adn.CCY.gn8.L4E.kVc.oRi.lnZ.wsz .tBJ.dyH.iFc.sAJ.JlN.tg7.H2s {
+        color: var(--color-text-dark)
+    }
+    
+    /* ellipsis */
+    .hs0.un8.C9i.TB_ [data-test-id="more-board-options"] button.HEm.adn.yQo.lnZ.wsz svg.Uvi {
+        color: var(--color-icon-default)
+    }
+    
+    
+    
+}
