@@ -1,0 +1,426 @@
+/* ==UserStyle==
+@name           www.novlr.org/project/66c23f3dc9d57900083a5e7b/66c23f6ff559a3e4d9c6144a - Aug 2024
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix(https://www.novlr.org/project), url-prefix("https://www.novlr.org/dashboard") {
+    :root * {
+        /* stick with pastel/midtones for light mode, and pastel for dark too */
+        --accent: rosybrown;
+        --accent: coral;		
+        --accent: darksalmon;
+        --accent: skyblue;
+		--accent: #697d8e;
+        --accent: #a8567c;
+        --accent: #b363b3;
+		--accent: #609560;
+		--accent: #c3a739;
+        --dark-accent: plum;
+        --dark-accent: #f09082;
+        --dark-accent: #6ba9c2;
+        --dark-accent: #fba2b0;
+		--dark-accent: #8b6bc2;
+		--dark-accent: plum;
+        --dark-accent: palevioletred;
+        --dark-accent: #9570db;
+        --accent-1000: color-mix(in hsl, var(--accent) 10%, black);
+        --accent-900: color-mix(in hsl, var(--accent) 30%, black);
+        --accent-800: color-mix(in hsl, var(--accent) 50%, black);
+        --accent-700: color-mix(in hsl, var(--accent) 70%, black);
+        --accent-600: color-mix(in hsl, var(--accent) 80%, black);
+        --accent-500: color-mix(in hsl, var(--accent) 90%, white);
+        --accent-400: color-mix(in hsl, var(--accent) 80%, white);
+        --accent-300: color-mix(in hsl, var(--accent) 70%, white);
+        --accent-200: color-mix(in hsl, var(--accent) 50%, white);
+        --accent-100: color-mix(in hsl, var(--accent) 40%, white);
+        
+        --tw-bg-opacity: 1;
+        --tw-border-opacity: 1;
+        
+        --bg-primary-light: rgb(248 249 252/var(--tw-bg-opacity));
+        --bg-primary-dark: rgb(23 27 43/var(--tw-bg-opacity));
+        --bg-primary: var(--bg-primary-light);
+        --mixed-bg-primary: color-mix(in oklab, var(--bg-primary) 60%, var(--accent-500));
+           
+        --bg-secondary-dark: rgb(33 38 56/var(--tw-bg-opacity));
+        --bg-secondary-light: rgb(255 255 255/var(--tw-bg-opacity));
+        --bg-secondary: var(--bg-secondary-light);
+        --mixed-bg-secondary: color-mix(in oklab, var(--bg-secondary), var(--accent-200));
+        
+        --bg-tertiary-dark: rgb(33 38 56/var(--tw-bg-opacity));
+        --bg-tertiary-light: rgba(248,249,252,.5);
+        --bg-tertiary-light: rgba(248,249,252,1);
+        --bg-tertiary: var(--bg-tertiary-light);
+        --mixed-bg-tertiary: color-mix(in oklab, var(--bg-tertiary) 50%, var(--accent-500));        
+            
+        --border-primary-dark: rgb(226 230 240/var(--tw-border-opacity));
+        --border-primary-light: rgb(71 81 105/var(--tw-border-opacity));
+        --border-primary: var(--border-primary-light);
+       
+        
+        --tw-prose-invert-body: color-mix(in oklab, var(--accent-1000), #fff9);
+        --tw-prose-body: #252b34;        
+		--tw-prose-bullets:  var(--accent-300)
+    }
+    
+    
+    :root *:is(.dark *) {
+        --accent: var(--dark-accent);  
+        --accent-100: color-mix(in oklab, var(--accent) 20%, black);
+        --accent-200: color-mix(in oklab, var(--accent) 30%, black);
+        --accent-300: color-mix(in oklab, var(--accent) 50%, black);
+        --accent-400: color-mix(in oklab, var(--accent) 70%, black);
+        --accent-500: color-mix(in oklab, var(--accent) 80%, black);
+        --accent-600: color-mix(in oklab, var(--accent) 90%, white);
+        --accent-700: color-mix(in oklab, var(--accent) 80%, white);
+        --accent-800: color-mix(in oklab, var(--accent) 70%, white);
+        --accent-900: color-mix(in oklab, var(--accent) 50%, white);
+        --accent-1000: color-mix(in oklab, var(--accent) 40%, white);
+        
+        --tw-prose-body: var(--tw-prose-invert-body);
+        --tw-prose-bullets:  var(--accent-700);
+		
+		--bg-primary: var(--bg-primary-dark);        
+        --mixed-bg-primary: color-mix(in oklab, var(--bg-primary) 60%, var(--accent-300));
+ 
+        --bg-secondary: var(--bg-secondary-dark);
+ 
+        --bg-tertiary: var(--bg-tertiary-dark);
+        --mixed-bg-tertiary: color-mix(in oklab, var(--bg-tertiary) 50%, var(--accent-100));
+        --border-primary: var(--border-primary-dark);
+    }
+    
+    /* accent color rewrite */
+    .bg-sky-100 {background-color: var(--accent-100)}
+    .bg-sky-200 {background-color: var(--accent-200)}
+    .bg-sky-300 {background-color: var(--accent-300)}
+    .bg-sky-400 {background-color: var(--accent-400)}
+    .bg-sky-500 {background-color: var(--accent-500)}
+	
+	.crisp-client {
+		background-color: var(--accent-500) !important;
+	}
+    
+    .hover\:bg-sky-400:hover {background-color: var(--accent-300); color: white}
+    
+	.fill-ink-800 {
+		fill: var(--accent-800)
+	}
+	.dark\:fill-ink-300:is(.dark *) {
+		fill: var(--accent-800)
+	}
+	.bg-amber-200:is(.dark *) {
+		background-color: #ab001f7a;
+	}
+	.border-amber-300:is(.dark *){
+		border-color: #ff3154;
+	}
+	button.border-amber-300:is(.dark *) {
+		color: var(--accent-100)
+	}
+    .text-sky-400 {color: var(--accent-400)}
+    .text-sky-800 {color: var(--accent-800)}
+    .text-ink-800 { color: var(--accent-900)}
+    .text-ink-800:is(.dark *) { color: var(--accent-100)}
+    .dark\:bg-ink-700:is(.dark *) {
+        background-color: color-mix(in oklab, var(--accent-900), var(--mixed-bg-secondary) 80%)
+    }
+    .text-ink-900 {color: var(--accent-900)} 
+    .dark\:bg-ink-600:is(.dark *) {
+        background-color: var(--accent-600);
+        color: var(--accent-900);
+    }
+    button.dark\:bg-ink-600:is(.dark *) {
+        background-color: var(--accent-500);
+        color: var(--accent-900);
+    }
+    .dark\:text-ink-100:is(.dark *) {
+        color: var(--accent-300);
+    }
+    
+    .border-sky-400 {border-color: var(--accent-400)}
+    
+    /*primary*/
+    .border-primary:is(.dark *).border-transparent {
+        border-color: transparent
+    } 
+	.border-primary:is(.dark *) {
+		border-color: color-mix(in oklab, var(--accent-900), transparent 75%)
+	}
+	.border-primary {
+		border-color: color-mix(in oklab, var(--accent-600), transparent 75%)
+	}	
+    .hover\:bg-primary-hover:hover {
+        background-color: color-mix(in oklab, var(--mixed-bg-primary), white 40%)
+    }
+    .hover\:bg-primary-hover:hover:is(.dark *) {
+        background-color: var(--accent-400);
+        color: white;
+    }
+    .hover\:bg-primary-hover:hover:is(.dark *) * {
+        color: var(--accent-900);
+    }
+    .bg-primary-hover-2 {
+        background-color: color-mix(in oklab, var(--mixed-bg-secondary) 70%, transparent)
+    }
+    .bg-primary-hover-2:is(.dark *) {
+        background-color: var(--mixed-bg-secondary)
+    }    
+    
+    .bg-primary:is(.dark *) {background-color: var(--bg-primary)}
+    .bg-primary:not(:is(#novlr-editor *, #novlr-editor)) {
+        background-color: var(--mixed-bg-primary)
+    }
+    
+	.hover\:bg-primary-hover-2:hover:is(.dark *) {
+		background-color: var(--accent-300);
+	}
+	.bg-primary-hover:is(.dark *) {
+		background-color: color-mix(in oklab, var(--accent-200), transparent);;
+	}
+	button.bg-primary-hover:is(.dark *) {
+		border: none;
+	}
+	
+	.group:has(a.bg-primary-hover-2) button.bg-primary-hover:is(.dark *) {
+		background-color: var(--accent-400)
+	}
+		
+	.group:has(a.bg-primary-hover-2) button.hover\:bg-primary-hover-3:hover:is(.dark *) {
+		background-color: var(--accent-500)
+	}
+    
+
+    /*secondary*/
+    button.bg-secondary-hover {
+        background-color:var(--accent-300)
+    }
+
+    .hover\:bg-secondary-hover-2:hover:is(.dark *) {
+        background-color: var(--accent-400);
+        color: white;
+    }
+    .hover\:bg-secondary-hover-2:hover {
+        background-color: color-mix(in oklab, var(--mixed-bg-secondary), white 40%)
+    }
+    .bg-secondary-hover:is(.dark *) {
+         background-color: var(--accent-300);
+    }
+    .text-secondary {
+        color: color-mix(in oklab, var(--accent-500), #000 30%)
+    }
+    .bg-secondary:not(#novlr-editor *, #novlr-editor) {
+        background-color: var(--mixed-bg-secondary)
+    }    
+    .text-secondary:is(.dark *) {
+        color: color-mix(in oklab, rgb(217, 217, 217), var(--accent-500) 40%);
+    }
+	.bg-secondary-hover-2 {
+		background-color: color-mix(in oklab, var(--accent-300), transparent);
+	}
+	.bg-secondary-hover-2:is(.dark *) {
+		background-color: color-mix(in oklab, var(--accent-700), var(--accent-800));
+		color: var(--accent-300)
+	}
+	.bg-secondary-hover-2:hover:is(.dark *) {
+		background-color: color-mix(in oklab, var(--accent-600), var(--accent-700));
+		color: var(--accent-300)
+	}	
+	.hover\:bg-secondary-hover-3:hover {
+		background-color: color-mix(in oklab, var(--accent-300), var(--accent-200));
+	}
+	
+	
+    /*tertiary*/
+    .bg-tertiary:is(.dark *) {background-color: var(--bg-tertiary)}
+    .bg-tertiary:not(#novlr-editor *, #novlr-editor) {
+        background-color: var(--mixed-bg-tertiary)
+    }  
+    
+    
+    /* Paragraph Indentation */
+    /* Indent all paragraphs that aren't right after dinkuses and aren't at the start of the text */
+    #novlr-editor p:not(:first-child):not(hr + p) {
+        text-indent: 2em
+    }
+    
+    /* Drop Caps */
+    #novlr-editor > p:first-child:first-letter {
+        --line-count: 2;
+        float: left;
+        font-family: "Abril Fatface", "DM Sans", "Lora";
+        font-size: calc((var(--line-count)*1.5em));
+        line-height: calc((var(--line-count)*1em));
+        margin-right: 0.1em;
+        padding: 0.17em 0.2em 0.23em;
+        display: block;
+        border: solid 0px color-mix(in oklab, var(--tw-prose-body), transparent);
+        font-weight: bolder;
+        background-color: color-mix(in oklab, var(--accent), transparent 60%);
+        background-color: var(--mixed-bg-tertiary);
+        color: color-mix(in oklab, var(--tw-prose-body), var(--accent) 90%);
+
+    }
+    
+    .dark #novlr-editor > p:first-child:first-letter {
+        --line-count: 2;
+		--bar-width: 20%;
+		--slice-size: 18deg;
+		--c1: color-mix(in oklab, var(--accent-300), transparent 70%);
+		--c2: color-mix(in oklab, var(--accent-400), transparent 70%);
+		--border-width: 4px;
+        color: var(--accent-900);
+		background-color: color-mix(in oklab, var(--tw-prose-body), var(--accent-400) 90%);
+		background-image: repeating-linear-gradient(
+			to top right,
+			var(--c1) calc(50% - var(--bar-width)),
+			var(--c2) 50%,
+			var(--c1) 50%,
+			var(--c2) calc(50% + var(--bar-width)));
+		background-image: repeating-conic-gradient(
+			var(--c1) 0deg var(--slice-size),
+			var(--c2) calc(1 * var(--slice-size)) calc(2 * var(--slice-size))	
+		);
+		border: ridge var(--border-width) var(--accent-500);
+        line-height: calc(
+			var(--line-count) * calc(1em - var(--border-width))
+		);
+		line-height: 1.75;
+		font-size: calc(
+			var(--line-count) * (1.5em - var(--border-width))
+		);
+        margin-right:  calc(0.5 * calc(var(--border-width) + 4px)) ; 
+        padding: 0.17em 0.2em 0.23em;
+    }
+    
+    /* Dinkus */
+    #novlr-editor hr {
+        overflow: visible; /* For IE */
+        padding: 0;
+        border: none;
+        /* border-top: medium dashed var(--accent);*/
+        color: var(--accent);
+        text-align: center;
+    }
+    
+    .dark #novlr-editor hr {
+        --mixed-color: color-mix(in hsl, currentcolor, skyblue 60%); 
+        /* obsolete line for hr (can be paired with a single symbol) in the centre
+		border-top: medium dashed color-mix(in hsl, var(--mixed-color), transparent 85%);
+		*/
+    }
+    #novlr-editor hr:after {
+		/* SO many dinkus options! */
+        content: "✻ ✻ ✻";
+		content: "✦•·········• ✧ •·········•✦";
+		content: ".·:*¨༺ ༻¨*:·.";
+		content: "༻¨*:·.·:*¨༺";
+		content: "༺⑊·········•  🌼  •········⫽༻";
+		content: "༺⑊·········•  ✿  •········⫽༻";
+		content: "✦•·········• ✦ •·········•✦";
+        display: inline-block;
+        position: relative;
+        top: -1em;
+        font-size: 1.5em;
+        padding: 0 0.5em;
+        background-color: var(--mixed-bg-secondary); /* omgg i cooked with this variable idea!! color-adaptable! */
+    }
+	.dark #novlr-editor hr:after {
+		content:  "༺⑊·········•  ✿  •········⫽༻";
+		content: "✦  ··• ✿ •··  ✦";
+	
+	}
+    
+    .prose {
+        color: var(--tw-prose-body)
+    }    
+
+    /* gradient */
+    /* light mode */
+    .bg-gradient-to-tr:not(.dark *) {
+  		background-image: radial-gradient(ellipse farthest-corner at bottom left, var(--tw-gradient-stops));
+	}	
+    .bg-gradient-to-tr:not(.dark *) {
+		--tw-gradient-stops: var(--mixed-bg-tertiary) transparent;
+        background-image: linear-gradient(to top right,var(--tw-gradient-stops));
+		/* display: none; */
+    }
+    .bg-gradient-to-r:not(.dark *) {
+        /* no longer left to right, but I can't change the class name */
+		--tw-gradient-from: var(--mixed-bg-tertiary);
+		--tw-gradient-mid: color-mix(in hsl, var(--mixed-bg-tertiary), transparent 10%);
+		--tw-gradient-to: color-mix(in oklab, var(--mixed-bg-primary), transparent 15%);
+		--tw-gradient-from-position: 10%;
+        --tw-gradient-via-position: 60%;
+        --tw-gradient-to-position: ;
+		--tw-gradient-stops: 
+			 var(--tw-gradient-from) var(--tw-gradient-from-position),
+			 var(--tw-gradient-mid) var(--tw-gradient-via-position),
+			 var(--tw-gradient-to) var(--tw-gradient-to-position);	
+  		background-image: linear-gradient(to top, var(--tw-gradient-stops));
+		backdrop-filter: blur(1px); 
+	}	
+    .bg-secondary.border-primary.relative.flex.h-\[200px\].w-full.items-center.overflow-hidden.border-b.px-12.font-pop {
+        border:none
+    }
+    /* dark mode */
+    /* left to right  */
+    .dark\:to-ink-900\/90:is(.dark *) {
+        --tw-gradient-from: 
+            color-mix(in hsl, var(--mixed-bg-tertiary), transparent 0%) var(--tw-gradient-from-position);
+        --tw-gradient-mid:
+           color-mix(in hsl, var(--accent-300), transparent 5%);
+        --tw-gradient-to: 
+            color-mix(in hsl, var(--accent-500), transparent 50%)
+            var(--tw-gradient-to-position);
+    }
+    .dark\:via-ink-900:is(.dark *) {
+        --tw-gradient-from-position: 10%;
+        --tw-gradient-via-position: 70%;
+        --tw-gradient-to-position: 150%;
+    --tw-gradient-stops: var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-mid) var(--tw-gradient-via-position),var(--tw-gradient-to) var(--tw-gradient-to-position);
+    }    
+    .bg-gradient-to-r:is(.dark *) {
+        /* no longer left to right, but I can't change the class name */
+  		background-image: linear-gradient(to top, var(--tw-gradient-stops));        
+	}
+    
+    .bg-secondary.border-primary.relative.h-\[200px\].w-full.overflow-hidden.border-b.px-12.font-pop,
+	.bg-secondary.border-primary.relative.h-\[200px\].w-full.overflow-hidden.border-b.px-12.font-pop{
+        border:none
+    }
+
+    .bg-gradient-to-tr:is(.dark *) {
+		--tw-gradient-stops: var(--mixed-bg-tertiary) transparent;
+        background-image: linear-gradient(to top right,var(--tw-gradient-stops));
+		
+    }
+    
+    
+    ::selection {
+        background-color: color-mix(in oklab, var(--accent), transparent 70%);
+    }
+	
+	
+	
+	/* project menu */
+	
+	/* make extra menu stay visible */
+	.absolute.right-2.top-2.hidden.group-hover\:block {
+		display: block
+	}
+	
+	/* modal */
+	.backdrop-blur-sm {
+		--tw-backdrop-saturate: saturate(70%);
+		--tw-backdrop-blur: blur(6px)
+	}
+	
+	.bg-secondary.border-primary.p-4.undefined:has(img[sizes="100000vw"]) {
+		display: none;
+	}
+}
+ 
